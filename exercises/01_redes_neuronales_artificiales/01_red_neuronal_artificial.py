@@ -47,7 +47,7 @@ plog(f"Suma ponderada z11 (neurona 1, capa oculta): {z11 if z11 is None else np.
 #
 # TODO: Completa el calculo de z12
 #
-z12 = None
+z12 = x1 * weights[2] + x2 * weights[3] + biases[1]
 
 # Impresion de la suma ponderada z12
 plog(f"Suma ponderada z12 (neurona 2, capa oculta): {z12 if z12 is None else np.around(z12, decimals=4)}", level=ERROR if z12 is None else DEBUG, eol=True)
@@ -69,7 +69,7 @@ plog(f"Salida a11 (neurona 1, capa oculta): {a11 if a11 is None else np.around(a
 #
 # TODO: Completa el calculo de a12
 # 
-a12 = None
+a12 = 1.0 / (1.0 + np.exp(-z12))
 
 # Impresion de la salida a12
 plog(f"Salida a12 (neurona 2, capa oculta): {a12 if a12 is None else np.around(a12, decimals=4)}", level=ERROR if a12 is None else DEBUG, eol=True)
@@ -78,7 +78,7 @@ plog(f"Salida a12 (neurona 2, capa oculta): {a12 if a12 is None else np.around(a
 # 
 # TODO: Calcula la suma ponderada de estas entradas para la neurona de salida. Asigna esta suma a (z2)
 #
-z2 = None
+z2 = a11 * weights[4]	+ a12 * weights[5] + biases[2]
 
 # Impresion de la suma ponderada z2
 plog(f"Suma ponderada z2 (neurona salida): {z2 if z2 is None else np.around(z2, decimals=4)}", level=ERROR if z2 is None else DEBUG, eol=True)
@@ -90,7 +90,7 @@ plog(f"Suma ponderada z2 (neurona salida): {z2 if z2 is None else np.around(z2, 
 #
 # TODO: Completa el calculo de a2
 #
-a2 = None
+a2 = 1.0 / (1.0 + np.exp(-z2))
 
 # Impresion de la salida a2
 plog(f"Salida a2 (neurona salida): {a2 if a2 is None else np.around(a2, decimals=4)}", level=ERROR if a2 is None else DEBUG, eol=True)

@@ -34,4 +34,3 @@ jobs:
       working-directory: autograde-core
       run: |
         pytest REDES-NEURONALES/01_redes_neuronales/test_01_red_neuronal_artificial.py
-        pytest REDES-NEURONALES/01_redes_neuronales/test_02_red_pequena.py

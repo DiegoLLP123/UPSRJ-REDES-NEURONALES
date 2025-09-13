@@ -1,7 +1,11 @@
 import numpy as np
-from utils.logger import set_logging, plog
+import sys
+import os
 from logging import DEBUG, INFO, WARNING, ERROR
 from pprint import pformat
+# Aseguramos que el path del proyecto este en sys.path para importar utils.logger
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+from utils.logger import set_logging, plog
 
 # Llamada a la funcion para configurar el logging
 set_logging(log_file='02_red_pequena.log')

@@ -1,7 +1,11 @@
 import numpy as np
+import sys
+import os
 from pprint import pprint as pp
-from utils.logger import set_logging, plog
 from logging import DEBUG, INFO, WARNING, ERROR
+# Aseguramos que el path del proyecto este en sys.path para importar utils.logger
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+from utils.logger import set_logging, plog
 
 # Llamada a la funcion para configurar el logging
 set_logging(log_file='01_red_neuronal_artificial.log')

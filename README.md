@@ -96,9 +96,9 @@ Sigue estos pasos:
 ### 🤫 2. Agrega el secreto requerido
 
 - **Name**: `AUTOGRADE_PAT`
-- **Secret**: `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`
+- **Secret**: `<YOUR_TOKEN>`
 
-> ⚠️ **Importante:** El valor del secret (`ghp_...`) es un ejemplo. Usa el token personal que corresponda a tu organización o cuenta.
+> ⚠️ **Importante:** Usa el token personal que corresponda a tu materia de classroom.
 
 ### 💾 3. Guarda el secreto
 

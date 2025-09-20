@@ -33,4 +33,4 @@ jobs:
     - name: Ejecutar pruebas
       working-directory: autograde-core
       run: |
-        pytest REDES-NEURONALES/01_redes_neuronales/test_01_red_neuronal_artificial.py
+        pytest REDES-NEURONALES/redes_neuronales_artificiales/test_redes_neuronales_artificiales.py

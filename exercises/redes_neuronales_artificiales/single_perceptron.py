@@ -48,14 +48,13 @@ set_logging(log_file='single_perceptron.log')
 #
 class InputData:
     def __init__(self, x: float):
-        # Parámetro de entrada de usuario
+        # Parametro de entrada de usuario
         self.x = x
-        # Inicialización aleatoria
+        # Inicializacion aleatoria
         self.w = self.init_weight()
     
     def init_weight(self):
-        value = random.random()
-        return value
+        return random.random()
     
     def update_weight(self, w: float):
         self.w = w

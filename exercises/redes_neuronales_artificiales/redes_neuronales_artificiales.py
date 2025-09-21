@@ -4,7 +4,7 @@ import random
 import sys
 import os
 from logging import DEBUG, INFO, WARNING, ERROR
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(_file_), '..', '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 from py_utils.logger import set_logging, plog
 
 # Llamada a la funcion para configurar el logging

@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - develop
-      - 'feature/activity**'
+      - 'feature/exercise**'
   pull_request:
     branches:
       - develop
-      - 'feature/activity**'
+      - 'feature/exercise**'
                 
 jobs:
   run-autograde:
@@ -31,6 +31,10 @@ jobs:
 
     - name: Inicializar submódulos
       run: git submodule update --init --recursive
+
+
+    - name: Verificar submódulos
+      run: ls -la ../REDES-NEURONALES/py_utils
 
     - name: Ejecutar pruebas
       working-directory: autograde-core

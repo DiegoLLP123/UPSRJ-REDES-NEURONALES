@@ -32,11 +32,6 @@ jobs:
     - name: Inicializar submódulos
       run: git submodule update --init --recursive
 
-
-    - name: Verificar submódulos
-      run: |
-        tree
-
     - name: Ejecutar pruebas
       working-directory: autograde-core
       run: |

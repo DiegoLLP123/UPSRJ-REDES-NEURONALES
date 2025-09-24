@@ -27,7 +27,9 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: Clonar repositorio de evaluación
-      run: git clone https://chucholoport:${{ secrets.AUTOGRADE_PAT }}@github.com/chucholoport/autograde-core.git
+      env:
+        AUTOGRADE_PAT: ${{ secrets.AUTOGRADE_PAT }}
+      run: git clone https://chucholoport:${AUTOGRADE_PAT}@github.com/chucholoport/autograde-core.git
 
     - name: Inicializar submódulos
       run: git submodule update --init --recursive
@@ -35,5 +37,5 @@ jobs:
     - name: Ejecutar pruebas
       working-directory: autograde-core
       run: |
-export PYTHONPATH=$PYTHONPATH:..
-pytest REDES-NEURONALES/redes_neuronales_artificiales/test_redes_neuronales_artificiales.py
+        PYTHONPATH=$PYTHONPATH:.. 
+        pytest REDES-NEURONALES/redes_neuronales_artificiales/test_redes_neuronales_artificiales.py

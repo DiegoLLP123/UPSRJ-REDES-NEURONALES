@@ -35,5 +35,5 @@ jobs:
     - name: Ejecutar pruebas
       working-directory: autograde-core
       run: |
-        export PYTHONPATH=$PYTHONPATH:..
-        pytest REDES-NEURONALES/redes_neuronales_artificiales/test_redes_neuronales_artificiales.py
+export PYTHONPATH=$PYTHONPATH:..
+pytest REDES-NEURONALES/redes_neuronales_artificiales/test_redes_neuronales_artificiales.py

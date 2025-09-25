@@ -47,7 +47,7 @@ set_logging(log_file='single_perceptron.log')
 #           - un peso "w"
 #
 class InputData:
-    def __init__(self, x: float):
+    def _init_(self, x: float):
         # Parametro de entrada de usuario
         self.x = x
         # Inicializacion aleatoria
@@ -76,7 +76,7 @@ clog(InputData)
 #           - una salida "a" definida por su función de activación
 #
 class Perceptron:
-    def __init__(self, inputs: list[InputData], b: float):
+    def _init_(self, inputs: list[InputData], b: float):
         self.inputs = inputs
         self.b = b
         self.z = self.forward()
